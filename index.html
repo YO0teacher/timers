@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RMC14 Timers</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+        <div class="expandable">
+        <button class="showCustom"></button>
+        <button class="showExtras"></button>
+        <button class="showNotepad"></button>
+        <button class="showInfo"></button>
+        </div>
+
+        <div class="custom" hidden>
+            <div class="custom-heading">
+                <h1>Create Your Own Timer</h1>
+            </div>
+            <input type="text" class="label" placeholder="Timer Label Here">
+            <input type="number" class="duration" placeholder="Duration in seconds here">
+            <button class="createTimer">Create Timer</button>
+        </div>
+
+        <div class="extras" hidden>
+            <div class="extras-heading">
+                <h1>Extras</h1>
+                <span class="extras-description" style="font-size: 18px;">Uploaded audio will play whenever a timer ends.<br>Uploaded images you can clone to move it around the page.</span>
+            </div>
+            <label class="file-picker">
+                <span class="file-name" style="font-size: 18px;">Upload Audio</span>
+                <input type="file" name="timerAudio" class="file-input">
+            </label>
+            <button class="clearTimerAudio">Remove Audio</button><br>
+            <label class="file-picker">
+                <span class="file-name" style="font-size: 18px;">Upload Image</span>
+                <input type="file" name="image" class="file-input">
+            </label>
+            <button class="cloneImage">Clone Image</button>
+            <button class="erase">Erase Cloned Images</button>
+            <br>
+            <button class="saveLayout">Save Layout</button>
+            <button class="loadLayout">Load Layout</button>
+        </div>
+
+        <div class="info" hidden>
+            <div class="custom-heading">
+                <h1>Info</h1>
+            </div>
+            <p class="infoText">Timer and notepad windows are resizable and draggable.
+                <br>Cloned images are draggable, so feel free to decorate the page.
+                <br>Remember to save your layout in the Extras tab when you're done!
+            </p>
+        </div>
+
+        <div id="window-container"></div>
+
+        <script type="text/javascript" src="tools.js"></script>
+    </body>
+</html>
